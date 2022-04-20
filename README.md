@@ -22,10 +22,6 @@ Principalmente los siguientes aspectos:
 
 [React ](https://es.reactjs.org/)** + SCSS**
 
-[Vuejs](https://vuejs.org/)** + SCSS**
-
-[Angular](https://angular.io/)** + SCSS**
-
 3. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
 
 4.  **Antes de comenzar a programar:**
