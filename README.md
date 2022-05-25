@@ -38,7 +38,9 @@ Principalmente los siguientes aspectos:
 
 ## EJERCICIO PRÁCTICO
 
-**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, explotando el API Rest pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
+**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, explotando el API Rest pública de GitHub https://api.github.com/search/users?q=YOUR_NAME. 
+
+**Nota** YOUR_NAME es un query string "parámetro"
 
  
 #### Requerimientos generales
