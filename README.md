@@ -18,7 +18,7 @@ Principalmente los siguientes aspectos:
 ## IMPORTANTE
 1. Asegúrate de tener `Node.js` y `npm` instalados.
 
-2. Se solicita crear la aplicación utilizando alguna de estas tecnologías Web de su elección:
+2. Se solicita crear la aplicación utilizando estas tecnologías:
 
 [React ](https://es.reactjs.org/)** + SCSS**
 
