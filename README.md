@@ -67,7 +67,3 @@ Principalmente los siguientes aspectos:
 
 3.  **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
 
-
-
-#### [Example application](https://github-search-users-app.web.app/)
-
