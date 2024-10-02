@@ -1,69 +1,54 @@
-# Prueba Técnica - Programador (Front-end)
+# Front end test UNOW
 
-La siguiente es una prueba para evaluar a los postulantes a programador **Front-end**.
+### Tareas Realizadas
 
-## INTRODUCCIÓN
+- Crea una aplicación utilizando React + SCSS.
+- La aplicación debe incluir un campo de entrada de texto y un botón para capturar el
+  usuario y recuperar información utilizando la API REST pública de GitHub: API
+  GitHub Usuarios.
+  -Muestra los primeros 10 usuarios del resultado de la búsqueda, incluyendo su
+  nombre de usuario (`'user.login'`) y el id (`'user.id'`).
+- Convierte cada perfil de usuario en un enlace que navegue a una ruta con la
+  propiedad `'user.login'` como parámetro.
+- Crea un componente independiente que obtenga y muestre datos de un usuario
+  específico utilizando la API: [API GitHub Usuarios por login.](https://api.github.com/users/YOUR_NAME)
+- Incluye la imagen del usuario (`'avatar_url'`) y otra información adicional en el
+  componente.
+- Implementa validadores que verifiquen que el texto de búsqueda tenga un mínimo
+  de 4 caracteres y que no permita la búsqueda de la palabra **“iseijasunow”**.
+- Integra una librería de gráficos para mostrar un gráfico de barras con el número de
+  seguidores de los 10 primeros usuarios.
+- Asegura que tu código CSS siga los principios de CSS Grid y/o CSS Flexbox para la
+  maquetación.
+- Implementar pruebas unitarias utilizando Jest y react-testing-library para los
+  componentes creados.
+- Asegúrate de cubrir casos relevantes como renderizado de componentes,
+  validaciones, y eventos de usuario.
+- Asegura un mínimo del 80% de cobertura de código.
+- Adherencia a BEM (cuando aplique): Asegura que el CSS siga los principios de la
+  metodología BEM para la organización de clases.
 
-Este repositorio contiene una serie de requerimientos de un Caso Práctico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología.
+### Instalación de dependencias
 
-#### ¿Qué se busca evaluar?
+```
+npm install
+```
 
-Principalmente los siguientes aspectos:
+### Listo para ejecutar
 
-+ Creatividad para resolver los requerimientos,
-+ Calidad del código entregado (estructura y buenas prácticas),
-+ Eficiencia de los algoritmos entregados,
-+ Familiaridad con Frameworks y plataformas de desarrollo Web.
+```
+npm run dev
+```
 
-## IMPORTANTE
-1. Asegúrate de tener `Node.js` y `npm` instalados.
+### Diseño
 
-2. Se solicita crear la aplicación utilizando estas tecnologías:
+Me inspiré en un [UI Kit](https://www.figma.com/community/file/1020079203222518115) disponible en Figma Community, para tener una guía  de diseño, color y aportar consistencia a la web
 
-[React ](https://es.reactjs.org/)** + SCSS**
+### SCSS
 
-3. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
+Utilicé variables para los colores y asi aportar mayor orden y facilidad a la hora de hacer cambios de diseño
 
-4.  **Antes de comenzar a programar:**
+### Código
 
-* Realizar un `Fork` de este repositorio (https://github.com/iseijasunow/Prueba-Tecnica_Front-end).
-* Clonar el fork a su máquina local `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
-* Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
-
-5.  **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
-
-* 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
-
-* 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
-
-## EJERCICIO PRÁCTICO
-
-**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, explotando el API Rest pública de GitHub https://api.github.com/search/users?q=YOUR_NAME. 
-
-**Nota** YOUR_NAME es un query string "parámetro"
-
- 
-#### Requerimientos generales
-
-1. La aplicación debe cumplir con los siguientes **requisitos funcionales:**
-
-- Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada.
-
-- Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (`'user.login'`) y el id (`'user.id'`) de cada registro.
-
-- Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad `'user.login'` como parámetro.
-
-- Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME
-
-- Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente.
-
-- Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“iseijasunow”**.
-
-- Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.
-
-- Incluir un componente para mostrar mensajes de Errores Generales en toda la aplicación.
-
-2.  **CSS:** Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto 
-
-3.  **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
-
+Opté por usar react con `'typescript'` porque es más fácil ver errores en desarrollo, hace el código mas legible y consistente
+También encapsulé la lógica de peticiones y formateo de los datos pedidos por la API de Github en un Custom hook llamado `'useFetchUsers'`

@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.profile-card {
+  background: $brand_50;
+  @include container(column, center, center, 4px, 40px);
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-bottom: 16px;
+    @include container(column, center, center);
+  }
+
+  &__text {
+    text-align: center;
+
+    &--name {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: $gray_900;
+    }
+
+    &--role {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: none;
+      color: $brand_700;
+    }
+
+    &--id {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray_600;
+    }
+  }
+}

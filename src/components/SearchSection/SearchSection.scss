@@ -1,0 +1,103 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.search {
+  @include container(column, center, center, 40px);
+
+  &--sm-spacing {
+    gap: 14px;
+    width: 70%;
+  }
+
+  &--row {
+    flex-direction: row;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__text--subheading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $brand_700;
+  }
+  &__text--heading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: $gray_900;
+  }
+
+  &__text--philosophy {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $gray_600;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 14px;
+    gap: 8px;
+    outline: none;
+
+    background: $white;
+    border: 1px solid $gray_300;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray_900;
+
+    &:focus-visible {
+      border: 1px solid $brand_300;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px $brand_100;
+      outline: none;
+    }
+
+    &--error {
+      border: 1px solid $error_300;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      &:focus-visible {
+        border: 1px solid $error_300;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      }
+    }
+  }
+
+  &__error {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $error_500;
+    position: absolute;
+  }
+
+  &__button {
+    padding: 12px 20px;
+    background: $brand_600;
+    border: 1px solid $brand_600;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+
+    &:disabled {
+      background-color: $brand_200;
+      border-color: $brand_200;
+    }
+  }
+}

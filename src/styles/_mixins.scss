@@ -1,0 +1,14 @@
+@mixin container(
+  $direction,
+  $align_items: start,
+  $justify_content: start,
+  $gap: 0px,
+  $padding: 0px
+) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  padding: $padding;
+  align-items: $align_items;
+  justify-content: $justify_content;
+}
